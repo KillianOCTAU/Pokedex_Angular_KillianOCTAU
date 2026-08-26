@@ -1,5 +1,5 @@
-<div class="card">
+<a class="card" [routerLink]="['/pokemon', id()]">
   <img [src]="spriteUrl()" [alt]="name()" />
   <p class="card-number">N° {{ id() }}</p>
   <p class="card-name">{{ name() }}</p>
-</div>
+</a>
