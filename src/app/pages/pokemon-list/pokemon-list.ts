@@ -29,7 +29,7 @@ export class PokemonList implements OnInit {
         return {
           id,
           name: entry.name,
-          spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`,
+          spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`,
         };
       });
       this.pokemons.set(items);
