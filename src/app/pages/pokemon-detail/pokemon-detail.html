@@ -1,1 +1,38 @@
-<p>pokemon-detail works!</p>
+<div class="page">
+  <a class="back" routerLink="/">← Retour</a>
+
+  @if (loading()) {
+    <p class="status">Chargement…</p>
+  } @else if (error()) {
+    <p class="status status-error">Erreur : impossible de charger ce Pokémon.</p>
+  } @else if (pokemon(); as p) {
+    <div class="detail">
+      <img [src]="p.sprites.other.home.front_default" [alt]="p.name" />
+
+      <h1>{{ p.name }}</h1>
+      <p class="number">N° {{ p.id }}</p>
+
+      <div class="types">
+        @for (t of p.types; track t.type.name) {
+          <span class="type-badge">{{ t.type.name }}</span>
+        }
+      </div>
+
+      <h2>Statistiques de base</h2>
+      <div class="stats">
+        @for (stat of p.stats; track stat.stat.name) {
+          <div class="stat-row">
+            <span class="stat-name">{{ stat.stat.name }}</span>
+            <div class="stat-bar-bg">
+              <div
+                class="stat-bar-fill"
+                [style.width.%]="(stat.base_stat / 255) * 100"
+              ></div>
+            </div>
+            <span class="stat-value">{{ stat.base_stat }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

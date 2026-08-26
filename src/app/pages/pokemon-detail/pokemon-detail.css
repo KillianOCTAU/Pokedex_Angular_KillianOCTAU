@@ -1,0 +1,99 @@
+.page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back:hover {
+  color: #e3350d;
+}
+
+.detail {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  text-align: center;
+}
+
+.detail img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.detail h1 {
+  text-transform: capitalize;
+  margin: 8px 0 4px;
+}
+
+.number {
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.type-badge {
+  background: #4a90d9;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.detail h2 {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 12px;
+  color: #e3350d;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.stat-name {
+  width: 110px;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.stat-bar-bg {
+  flex: 1;
+  height: 12px;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: #e3350d;
+  border-radius: 6px;
+}
+
+.stat-value {
+  width: 36px;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
