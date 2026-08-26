@@ -1,0 +1,17 @@
+<div class="page">
+  <h1>Pokédex</h1>
+
+  @if (loading()) {
+    <p class="status">Chargement…</p>
+  } @else {
+    <div class="grid">
+      @for (pokemon of pokemons(); track pokemon.id) {
+        <app-pokemon-card
+          [id]="pokemon.id"
+          [name]="pokemon.name"
+          [spriteUrl]="pokemon.spriteUrl"
+        />
+      }
+    </div>
+  }
+</div>
