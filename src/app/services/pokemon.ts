@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PokemonListResponse } from '../models/pokemon.model';
+import { PokemonDetail, PokemonListResponse } from '../models/pokemon.model';
 
 @Injectable({
   providedIn: 'root',
@@ -12,5 +12,9 @@ export class PokemonService {
 
   getPokemonList(limit = 20): Observable<PokemonListResponse> {
     return this.http.get<PokemonListResponse>(`${this.baseUrl}/pokemon?limit=${limit}`);
+  }
+
+  getPokemonDetail(id: number): Observable<PokemonDetail> {
+    return this.http.get<PokemonDetail>(`${this.baseUrl}/pokemon/${id}`);
   }
 }
