@@ -1,11 +1,21 @@
 <div class="page">
   <h1>Pokédex</h1>
 
+  <input
+    class="search"
+    type="text"
+    placeholder="Rechercher un Pokémon..."
+    (input)="onSearch(searchInput.value)"
+    #searchInput
+  />
+
   @if (loading()) {
     <p class="status">Chargement…</p>
+  } @else if (filtered().length === 0) {
+    <p class="status">Aucun Pokémon trouvé.</p>
   } @else {
     <div class="grid">
-      @for (pokemon of pokemons(); track pokemon.id) {
+      @for (pokemon of filtered(); track pokemon.id) {
         <app-pokemon-card
           [id]="pokemon.id"
           [name]="pokemon.name"
