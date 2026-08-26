@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+}
+
+.card-number {
+  font-size: 0.75rem;
+  color: #999;
+  margin: 4px 0 2px;
+}
+
+.card-name {
+  font-weight: 600;
+  text-transform: capitalize;
+}
